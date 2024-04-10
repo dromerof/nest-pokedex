@@ -4,22 +4,22 @@
 
 # Ejecutar en desarrollo
 
-1. Clonar el repositorio
+1. Clonar el repositorio.
 ```
 git clone https://github.com/dromerof/nest-pokedex.git
 ```
 
-2. Ejecutar 
+2. Ejecutar.
 ``` 
 yarn install
 ``` 
 
-3. Tener Nest CLI instalado
+3. Tener Nest CLI instalado.
 ``` 
 npm i -g @nestjs/cli
 ``` 
 
-4. Levantar la base de datos
+4. Levantar la base de datos.
 ``` 
 docker-compose up -d
 ```
@@ -33,10 +33,20 @@ docker-compose up -d
 yarn start: dev
 ```
 
-8. Reconstruir la base de datos con la semilla
+8. Reconstruir la base de datos con la semilla.
 ```
 http://localhost:3000/api/v2/seed
 ```
+
+# Production Build
+
+1. Crear el archivo ```.env.prod```
+2. Llenar las variables de entorno de producción.
+3. Crear la nueva imagen.
+```
+docker-compose -f docker-compose.prod.yaml --env-file .env.prod up --build
+```
+
 
 ## Stack usado  
 * TypeScript
